@@ -2,6 +2,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle, Shield, Star } from "lucide-react"
 import TestimonialCard from "@/components/testimonial-card"
+import bg from "../public/bg.png"
+
 
 export default function Home() {
   return (
@@ -15,29 +17,34 @@ export default function Home() {
             understand potential conditions and next steps for your health journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700">
-              <Link href="/symptom-checker">
+            <button asChild size="lg" className="bg-teal-600 hover:bg-green-700 p-4 rounded-md">
+              <Link href="/symptom-checker" className="px-6 py-4 flex items-center">
                 Start Symptom Check <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/about">Learn More</Link>
-            </Button>
+            </button>
+
+            <button asChild  className="p-10" variant="outline" size="lg">
+              <Link href="/about" className="px-6 py-4">
+                Learn More
+              </Link>
+            </button>
+
           </div>
         </div>
         <div className="flex-1 flex justify-center">
           <img
-            src="/placeholder.svg?height=400&width=400"
+            src="/bg.png"
             alt="AI Healthcare Illustration"
             className="max-w-full h-auto rounded-lg shadow-lg"
           />
+
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-16 bg-slate-50 rounded-xl my-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">How HealthAI Works</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">How SehatSetu Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -78,12 +85,12 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">What Our Users Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <TestimonialCard
-            quote="HealthAI helped me understand my symptoms before my doctor's appointment. It made the conversation with my physician much more productive."
+            quote="SehatSetu helped me understand my symptoms before my doctor's appointment. It made the conversation with my physician much more productive."
             author="Sarah J."
             role="Patient"
           />
           <TestimonialCard
-            quote="As a healthcare professional, I'm impressed with the accuracy of HealthAI's symptom analysis. It's a valuable tool for patients."
+            quote="As a healthcare professional, I'm impressed with the accuracy of SehatSetu's symptom analysis. It's a valuable tool for patients."
             author="Dr. Michael Chen"
             role="Family Physician"
           />
@@ -100,7 +107,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">Ready to check your symptoms?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get started with HealthAI today and take the first step toward understanding your health better.
+            Get started with SehatSetu today and take the first step toward understanding your health better.
           </p>
           <Button asChild size="lg" className="bg-white text-teal-600 hover:bg-slate-100">
             <Link href="/symptom-checker">

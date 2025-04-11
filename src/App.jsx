@@ -11,7 +11,7 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light">
       <div className="min-h-screen flex flex-col">
-        <Header />
+        {/* <Header /> */}
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />

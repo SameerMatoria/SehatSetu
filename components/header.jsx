@@ -24,7 +24,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
             <div className="bg-teal-600 text-white font-bold rounded-md p-1.5">HA</div>
-            <span className="font-bold text-xl">HealthAI</span>
+            <span className="font-bold text-xl">SehatSetu</span>
           </Link>
         </div>
 
@@ -45,12 +45,12 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button asChild variant="ghost" size="sm">
+          <button asChild variant="ghost" size="sm">
             <Link href="/login">Login</Link>
-          </Button>
-          <Button asChild size="sm" className="bg-teal-600 hover:bg-teal-700">
+          </button>
+          <button asChild size="sm" className="bg-teal-600 p-4 rounded-md hover:bg-teal-700">
             <Link href="/login?tab=signup">Sign Up</Link>
-          </Button>
+          </button>
         </div>
 
         {/* Mobile menu button */}

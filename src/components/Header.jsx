@@ -24,7 +24,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center space-x-2">
             <div className="bg-teal-600 text-white font-bold rounded-md p-1.5">HA</div>
-            <span className="font-bold text-xl">HealthAI</span>
+            <span className="font-bold text-xl">SehatSetu</span>
           </Link>
         </div>
 

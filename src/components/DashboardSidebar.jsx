@@ -42,7 +42,7 @@ export default function DashboardSidebar() {
           <div className="flex items-center h-16 flex-shrink-0 px-4 border-b border-slate-200">
             <Link to="/" className="flex items-center space-x-2">
               <div className="bg-teal-600 text-white font-bold rounded-md p-1.5">HA</div>
-              <span className="font-bold text-xl">HealthAI</span>
+              <span className="font-bold text-xl">SehatSetu</span>
             </Link>
           </div>
           <div className="flex-grow flex flex-col pt-5 pb-4 overflow-y-auto">
@@ -90,7 +90,7 @@ function MobileSidebar({ pathname, onClose }) {
       <div className="flex items-center justify-between h-16 flex-shrink-0 px-4 border-b border-slate-200">
         <Link to="/" className="flex items-center space-x-2" onClick={onClose}>
           <div className="bg-teal-600 text-white font-bold rounded-md p-1.5">HA</div>
-          <span className="font-bold text-xl">HealthAI</span>
+          <span className="font-bold text-xl">SehatSetu</span>
         </Link>
         <Button variant="ghost" size="icon" onClick={onClose}>
           <X className="h-5 w-5" />

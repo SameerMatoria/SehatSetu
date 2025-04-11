@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <div className="flex-1 flex justify-center">
           <img
-            src="https://placehold.co/400x400/e2e8f0/1e293b?text=Health+AI"
+            src="https://placehold.co/400x400/e2e8f0/1e293b?text=SehatSetu"
             alt="AI Healthcare Illustration"
             className="max-w-full h-auto rounded-lg shadow-lg"
           />
@@ -37,7 +37,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16 bg-slate-50 rounded-xl my-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">How HealthAI Works</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">How SehatSetu Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -78,12 +78,12 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">What Our Users Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <TestimonialCard
-            quote="HealthAI helped me understand my symptoms before my doctor's appointment. It made the conversation with my physician much more productive."
+            quote="SehatSetu helped me understand my symptoms before my doctor's appointment. It made the conversation with my physician much more productive."
             author="Sarah J."
             role="Patient"
           />
           <TestimonialCard
-            quote="As a healthcare professional, I'm impressed with the accuracy of HealthAI's symptom analysis. It's a valuable tool for patients."
+            quote="As a healthcare professional, I'm impressed with the accuracy of SehatSetu's symptom analysis. It's a valuable tool for patients."
             author="Dr. Michael Chen"
             role="Family Physician"
           />
