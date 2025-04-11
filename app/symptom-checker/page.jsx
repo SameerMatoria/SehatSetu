@@ -35,38 +35,38 @@ export default function SymptomChecker() {
 
   const handleVoiceInput = () => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
-  
+
     if (!SpeechRecognition) {
       alert("Your browser does not support speech recognition.")
       return
     }
-  
+
     const recognition = new SpeechRecognition()
     recognition.lang = "en-US"
     recognition.interimResults = false
     recognition.maxAlternatives = 1
-  
+
     setIsListening(true)
     recognition.start()
-  
+
     recognition.onresult = (event) => {
       const transcript = event.results[0][0].transcript
       setSymptomInput(transcript)
       setShowSuggestions(true)
       setIsListening(false)
     }
-  
+
     recognition.onerror = (event) => {
       console.error("Speech recognition error:", event.error)
       alert("Speech recognition error: " + event.error)
       setIsListening(false)
     }
-  
+
     recognition.onend = () => {
       setIsListening(false)
     }
   }
-  
+
 
   const handleAnalyzeSymptoms = () => {
     if (selectedSymptoms.length === 0) {
@@ -139,14 +139,14 @@ export default function SymptomChecker() {
                     {showSuggestions && <SymptomSuggestions input={symptomInput} onSelect={handleAddSymptom} />}
                   </div>
                   <button
-  className=""
-  variant="outline"
-  size="icon"
-  onClick={handleVoiceInput}
-  title="Voice input"
->
-  <Mic className={`h-4 w-4 ${isListening ? "text-red-500 animate-pulse" : ""}`} />
-</button>
+                    className=""
+                    variant="outline"
+                    size="icon"
+                    onClick={handleVoiceInput}
+                    title="Voice input"
+                  >
+                    <Mic className={`h-4 w-4 ${isListening ? "text-red-500 animate-pulse" : ""}`} />
+                  </button>
 
                   <Button onClick={() => handleAddSymptom(symptomInput)} disabled={!symptomInput}>
                     <Plus className="h-4 w-4 mr-2" /> Add

@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 
 export default function Dashboard() {
+  const [toggle, setToggle] = useState(false);
   const [userData] = useState({
     name: "Alex Johnson",
     recentDiagnoses: [
@@ -48,23 +49,41 @@ export default function Dashboard() {
     alert("Document upload would be initiated here")
   }
 
+  const toggleSidebar = () => {
+    setToggle(prev => !prev);
+  }
+
   return (
     <div className="flex min-h-screen bg-slate-50">
-      <DashboardSidebar />
+
+      <div>
+        {toggle ? <DashboardSidebar /> : ""}
+      </div>
 
       <div className="flex-1 p-8">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-            <div>
-              <h1 className="text-3xl font-bold text-slate-900">Dashboard</h1>
-              <p className="text-slate-600">Welcome back, {userData.name}</p>
-            </div>
-            <Button asChild className="bg-teal-600 hover:bg-teal-700">
-              <Link href="/symptom-checker">
-                <Plus className="mr-2 h-4 w-4" /> New Symptom Check
-              </Link>
-            </Button>
-          </div>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+  <div>
+    <h1 className="text-3xl font-bold text-slate-900">Dashboard</h1>
+    <p className="text-slate-600">Welcome back, {userData.name}</p>
+  </div>
+
+  <div className="flex items-center gap-4">
+    <button asChild className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md">
+      <Link href="/symptom-checker">
+        New Symptom Check
+      </Link>
+    </button>
+    
+    <button
+      className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md"
+      onClick={toggleSidebar}
+    >
+      Menu
+    </button>
+  </div>
+</div>
+
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <Card>

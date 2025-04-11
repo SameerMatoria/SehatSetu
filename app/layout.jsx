@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="min-h-screen flex flex-col">
-            {/* <Header /> */}
+            <Header />
             {/* <GeminiInput /> */}
             <main className="flex-1">{children}</main>
           </div>
